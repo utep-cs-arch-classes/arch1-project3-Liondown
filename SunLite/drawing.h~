@@ -1,0 +1,14 @@
+#include "shape.h"
+
+void drawPlanetary(Layer pLayer, u_int colorScheme, char x, char y);
+
+void drawSunLayer(Layer sLayer, u_int colorScheme, char x, char y);
+
+void drawStars(char rand);
+
+void drawSpace();
+
+void _planMessage(Layer pLayer, u_int colorScheme);
+
+void _sunMessage(Layer sLayer, u_int colorScheme);
+

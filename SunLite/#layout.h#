@@ -1,0 +1,12 @@
+
+
+u_char phaseNumber;
+
+int phases[23] = {0};
+
+int makeEarthTurn();
+
+int makeSunTurn();
+
+void changeColors();
+

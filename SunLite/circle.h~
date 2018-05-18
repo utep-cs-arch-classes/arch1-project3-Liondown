@@ -1,0 +1,8 @@
+
+
+typedef unsigned long u_long;
+
+typedef struct Colors_s {
+  u_int colors[8];
+
+  for(

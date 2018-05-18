@@ -1,0 +1,85 @@
+#include "lcdutils.h"
+#include "lcddraw.h"
+#include "shape.h"
+#include "layer.h"
+#include "drawing.h"
+
+
+
+Layer *_planMessage(Layer pLayer, u_int colorScheme, char x, char y){
+
+  Layer *temp = malloc(sizeof *temp);
+  // Changes color
+  *temp = pLayer;
+  temp.color = colorScheme;
+  // Changes coords
+  temp.pos = (x, y);
+  return *temp;
+  
+}
+
+Layer _sunMessage(Layer *sLayer, u_int colorScheme){
+
+  // Changes color
+  sLayer.color = colorScheme;
+  return sLayer;
+  
+}
+
+void drawStars(char rand){
+  
+
+}
+
+void drawSpace(){
+
+  clearScreen(COLOR_BLACK);
+
+}
+
+/*
+Layer drawOther(Layer *pLayer){
+  layerDraw(player);
+  
+}
+/*
+Layer drawPlanetaryLayer(Layer *pLayer,int nextCall){
+  layerDraw(pLayer);
+
+  if(nextCall == 0)
+    pLayer->color = COLOR_SKY_BLUE;
+  else if(nextCall == 1)
+    pLayer->color = COLOR_SPRING_GREEN;
+  else if(nextCall == 2)
+    pLayer->color = COLOR_AQUAMARINE;
+  else if(nextCall == 3)
+    pLayer->color = COLOR_FOREST_GREEN;
+
+  return pLayer;
+}
+
+Layer drawSunLayer(Layer *sLayer, int nextCall){
+  layerDraw(sLayer);
+
+  if(nextCall == 0)
+    sLayer->color = COLOR_GOLD;
+  else if(nextCall == 1)
+    sLayer->color = COLOR_RED;
+  else if(nextCall == 2)
+    sLayer->color = COLOR_YELLOW
+  else if(nextCall == 3)
+    sLayer->color = COLOR_ORANGE;
+
+  return sLayer;
+}
+*/
+
+void selectedNum(unsigned int switches){
+  char str[5];
+  for(int i=0; i<4; i++){
+    str[i] = (switches & (1<<i)) ? '-' : '0' +i;
+
+  str[4] = 0;
+  drawString5x7(20,20, str, COLOR_GREEN, COLOR_BLUE);
+  } 
+}
